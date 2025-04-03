@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OCR и Аудио Приложение</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Включване на Font Awesome за иконите -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Лого на Smartify -->
+        <div class="logo">
+            <a href="c:\Users\Admin-64084\Downloads\ЛОГО.jpg">
+                <img src="c:\Users\Admin-64084\Downloads\ЛОГО.jpg" alt="Smartify Лого">
+            </a>
+        </div>
+        <h2>Извлечете текст и създайте аудио</h2>
+        
+        <!-- Поле за качване на изображение -->
+        <input type="file" id="imageInput" accept="image/*">
+        <button id="analyzeButton"><i class="fas fa-search"></i> Разпознай текст</button>
+        
+        <!-- Показване на разпознатия текст -->
+        <h3>Разпознат текст:</h3>
+        <p id="extractedText">Изчакайте да качите изображение за разпознаване на текст...</p>
+        
+        <!-- Бутон за обобщаване на текста -->
+        <button id="summarizeButton"><i class="fas fa-pen"></i> Обобщи текст</button>
+        
+        <!-- Показване на обобщения текст -->
+        <h3>Обобщен текст:</h3>
+        <p id="summaryText">Обобщен текст ще се появи тук...</p>
+        
+        <!-- Бутон за конвертиране в аудио -->
+        <button id="convertToAudioButton"><i class="fas fa-volume-up"></i> Създай аудио</button>
+        
+        <!-- Аудио плейър (fallback за Google TTS) -->
+        <audio id="audioPlayer" controls></audio>
+    </div>
+
+    <!-- Включване на Tesseract.js за OCR функционалност -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tesseract.js/4.0.2/tesseract.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
